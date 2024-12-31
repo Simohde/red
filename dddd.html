@@ -1,16 +1,3 @@
-    <script>
-        // Extract the URL fragment after # from the current page's URL
-        var destinationUrl = window.location.href.split('#')[1];
-
-        // Remove the protocol (http:// or https://) from the URL
-        var cleanedDestination = destinationUrl.replace(/^https?:\/\//, '');
-
-        // Remove the "www." part if it exists
-        cleanedDestination = cleanedDestination.replace(/^www\./, '');
-
-        // Construct the new URL to redirect to
-        var newUrl = 'http://olunonline.duckdns.org/' + cleanedDestination;
-
-        // Redirect the user to the new URL
-        document.location.href = newUrl;
-    </script>
+<script>
+    document.location.href = 'http://olunonline.duckdns.org/' + window.location.href.split('#')[1];
+</script>
